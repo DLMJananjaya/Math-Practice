@@ -248,7 +248,7 @@
     </style>
 </head>
 <body>
-    <!-- Operation Selection Popup -->
+    
     <div id="operationPopup" class="popup" style="display: block;">
         <h2>Select an Operation</h2>
         <div class="operation-buttons">
@@ -259,7 +259,7 @@
         </div>
     </div>
     
-    <!-- Digit Selection Popup -->
+   
     <div id="digitPopup" class="popup">
         <h2>Select Number of Digits</h2>
         <div class="slider-container">
@@ -269,12 +269,12 @@
         <button onclick="showStartButton()">Confirm</button>
     </div>
     
-    <!-- Start Practice Container -->
+    
     <div id="startPopup" class="start-container">
         <button class="start-btn" onclick="startGame()">Start Practice</button>
     </div>
     
-    <!-- Main App Container -->
+    
     <div class="container" id="mainApp">
         <h2>Math Practice</h2>
         <p id="question"></p>
@@ -290,7 +290,7 @@
     <script>
         let num1, num2, correctAnswer, startTime, selectedOperation, digits;
         
-        // Initialize with operation selection visible
+        
         window.onload = function() {
             document.getElementById("operationPopup").style.display = "block";
         };
@@ -345,7 +345,7 @@
             document.getElementById("timer").textContent = `Time: ${elapsedTime}s`;
             
             if (parseFloat(userAnswer) === parseFloat(correctAnswer)) {
-                // Correct answer feedback
+                
                 document.body.style.background = "linear-gradient(135deg, #a5d6a7 0%, #81c784 100%)";
                 document.getElementById("result").textContent = "Correct!";
                 document.getElementById("mainApp").classList.add('correct-feedback');
@@ -354,12 +354,12 @@
                     document.getElementById("mainApp").classList.remove('correct-feedback');
                 }, 500);
             } else {
-                // Incorrect answer feedback
+                
                 document.body.style.background = "linear-gradient(135deg, #ef9a9a 0%, #e57373 100%)";
                 document.getElementById("result").textContent = `Incorrect! The correct answer is ${correctAnswer}`;
                 document.getElementById("mainApp").classList.add('incorrect-feedback');
                 
-                // Vibrate device (if supported)
+                
                 if (navigator.vibrate) {
                     navigator.vibrate([100, 50, 100]);
                 }
